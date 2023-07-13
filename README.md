@@ -1,6 +1,9 @@
 # HashiCorp Vault with .NET Example
 
 These assets are provided to show how to use HashiCorp Vault with .NET.
+
+It's included here as supporting content to the [Using HashiCorp Vault C# Client with .NET Core](https://developer.hashicorp.com/vault/tutorials/app-integration/dotnet-httpclient) tutorial.
+
 It uses two patterns:
 
 - Vault C# Library for Static Secrets Injection
