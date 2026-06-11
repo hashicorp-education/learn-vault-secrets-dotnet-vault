@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/mssql/server:2019-latest
+FROM mcr.microsoft.com/mssql/server:2025-latest
 
 USER root
 RUN mkdir -p /usr/src/app
