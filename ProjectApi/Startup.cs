@@ -7,7 +7,7 @@ using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore;
 using ProjectApi.Models;
 using ProjectApi.CustomOptions;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using System;
 
 namespace ProjectApi
