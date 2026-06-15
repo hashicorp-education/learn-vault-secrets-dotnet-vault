@@ -90,9 +90,12 @@ env/
 .bob/**
 
 ## dotnet files
-.nuget/
-obj/
 bin/
+obj/
+*.user
+*.suo
+*.cache
+project.lock.json
 
 ## this project
 ProjectApi/vault-agent/role-id
