@@ -1,5 +1,27 @@
 # HashiCorp Vault with .NET Example
 
+> 📚 **Tutorials:**  
+> - [Retrieve secrets with C# HTTP client](https://developer.hashicorp.com/vault/tutorials/app-integration/dotnet-httpclient)  
+> - [Use Vault Agent with .NET](https://developer.hashicorp.com/vault/tutorials/app-integration/dotnet-vault-agent)  
+> 🎯 **Difficulty:** Intermediate  
+> ⏱️ **Time:** 60-90 minutes (both tutorials)  
+> 🖥️ **Platform:** Local (Docker + .NET)  
+> 🔧 **Min Version:** Vault 2.0, .NET 10.0
+
+## Prerequisites
+
+Before starting, ensure you have:
+
+- **Docker Desktop** running (for Vault and MSSQL containers)
+- **.NET 8.0 SDK** installed
+- **Git** for cloning the repository
+- **Basic knowledge** of:
+  - Docker and containers
+  - .NET/C# development
+  - HashiCorp Vault concepts (secrets engines, auth methods)
+
+**Estimated time:** 60-90 minutes for both tutorials
+
 These assets are provided to show how to use HashiCorp Vault with .NET.
 
 It's included here as supporting content to the [Using HashiCorp Vault C# Client with .NET Core](https://developer.hashicorp.com/vault/tutorials/app-integration/dotnet-httpclient) tutorial.
@@ -21,7 +43,7 @@ For complete instructions, visit the following links:
 
 - [Docker Compose](https://docs.docker.com/compose/)
 - [Docker](https://docs.docker.com/get-docker/)
-- [.NET 5.0+](https://dotnet.microsoft.com/download/dotnet/5.0)
+- [.NET 10.0+](https://dotnet.microsoft.com/download/dotnet/10.0)
 - [VaultSharp](https://github.com/rajanadar/VaultSharp)
 
 ## Demo Script Guide
@@ -56,7 +78,7 @@ The following files are provided as demo scripts:
 
 ### Demo Workflow
 
-> **NOTE:** DON'T FORGET that this demo requires .NET 5.0+ and Docker Compose to run the example application!
+> **NOTE:** DON'T FORGET that this demo requires .NET 10.0+ and Docker Compose to run the example application!
 
 1. Run `demo_setup.sh`. This creates a Vault instance (in development mode) and
    a Microsoft SQL Server database with a table prepopulated with data.

@@ -1,8 +1,11 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: MPL-2.0
+
 version: "3.3"
 services:
 
   vault-agent:
-    image: vault:1.11.0
+    image: hashicorp/vault:1.21.0
     restart: always
     command: [ 'vault', 'agent', '-config=/vault/ProjectApi/vault-agent/config-vault-agent-template.hcl']
     volumes:

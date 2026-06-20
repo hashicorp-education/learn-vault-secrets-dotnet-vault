@@ -1,4 +1,6 @@
 #!/bin/bash
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: MPL-2.0
 
 export VAULT_ADDR='http://127.0.0.1:8200'
 export VAULT_TOKEN='some-root-token'
@@ -16,7 +18,7 @@ vault kv put projects-api/secrets/static 'password=Testing!123'
 
 vault write projects-api/database/config/projects-database \
 	 	plugin_name=mssql-database-plugin \
-	 	connection_url='sqlserver://{{username}}:{{password}}@db:1433' \
+	 	connection_url='sqlserver://{{username}}:{{password}}@db:1433?encrypt=false&trustServerCertificate=true' \
 	 	allowed_roles="projects-api-role" \
 	 	username="sa" \
 	 	password="Testing!123"
@@ -24,8 +26,8 @@ vault write projects-api/database/config/projects-database \
 vault write projects-api/database/roles/projects-api-role \
     db_name=projects-database \
     creation_statements="CREATE LOGIN [{{name}}] WITH PASSWORD = '{{password}}';\
-				USE HashiCorp;\
-				CREATE USER [{{name}}] FOR LOGIN [{{name}}];\
+            USE HashiCorp;\
+            CREATE USER [{{name}}] FOR LOGIN [{{name}}];\
         GRANT SELECT,UPDATE,INSERT,DELETE TO [{{name}}];" \
     default_ttl="2m" \
     max_ttl="5m"

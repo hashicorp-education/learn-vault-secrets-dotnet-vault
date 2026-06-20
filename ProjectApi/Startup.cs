@@ -3,11 +3,11 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.OpenApi.Models;
+using Microsoft.OpenApi;
 using Microsoft.EntityFrameworkCore;
 using ProjectApi.Models;
 using ProjectApi.CustomOptions;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using System;
 
 namespace ProjectApi

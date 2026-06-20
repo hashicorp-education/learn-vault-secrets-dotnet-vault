@@ -5,8 +5,8 @@ GO
 DROP TABLE IF EXISTS Projects;
 GO
 CREATE TABLE Projects(
-  [Id] [varchar](50),
+  [Id] [varchar](25),
   [YearOfFirstCommit] int,
-  [GitHubLink] [varchar](255)
+  [GitHubLink] [varchar](50)
 );
 GO

@@ -1,8 +1,10 @@
-version: "3.3"
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: MPL-2.0
+
 services:
 
   vault:
-    image: vault:1.11.0
+    image: hashicorp/vault:2.0
     restart: always
     command: [ 'vault', 'server', '-dev', '-dev-listen-address=0.0.0.0:8200']
     environment:
@@ -16,8 +18,11 @@ services:
         ipv4_address: 10.5.0.2
 
   db:
-    build: database
+    build: 
+      context: ./database
+      dockerfile: Dockerfile
     image: db
+    platform: linux/amd64
     networks:
       vpcbr:
         ipv4_address: 10.5.0.3
